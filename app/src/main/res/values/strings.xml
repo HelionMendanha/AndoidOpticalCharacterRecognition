@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">1SampleOCR</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_message">Hello blank fragment</string>
+
+    <string name="btn_flash">Tirar foto</string>
+    <string name="receive_photo_message">Recebendo foto</string>
+    <string name="receive_photo_error_ocr_detector">Detector dependencies are not yet available</string>
+    <string name="no_orc_detect">Nenhum caracter detectado</string>
+
+    <string name="description_image_default">Imagem</string>
+</resources>
