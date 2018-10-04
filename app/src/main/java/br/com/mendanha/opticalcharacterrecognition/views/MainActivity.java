@@ -35,8 +35,6 @@ import br.com.mendanha.opticalcharacterrecognition.R;
 
 public class MainActivity extends AppCompatActivity  implements  View.OnClickListener{
 
-    //private Button selectButton,roteteL,roteteR;
-    //private FloatingActionButton fotoFAB;
     private Bitmap currentlBitmap;
     private TextView resultadoTXT;
     private ImageView image,camStart,galeryStart,rotateLeft,rotateRight;
@@ -127,10 +125,10 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
 
         if(view.getId() == R.id.rotateLeft){
 
-            rotete(90);
+            rotete(-90);
         }else if(view.getId() == R.id.rotateRight){
 
-            rotete(-90);
+            rotete(90);
         }else if(view.getId() == R.id.galeryStart){
 
             openGallery();
@@ -141,8 +139,9 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
 
             constraintLayoutBar.setVisibility(View.VISIBLE);
             constraintLayoutBar.setAnimation(fadeAnimation);
-            
+
             defaultLayoutCardViewImage.height = defaultHeight;
+            cardViewImage.clearAnimation();
             cardViewImage.setLayoutParams(defaultLayoutCardViewImage);
         }else if(view.getId() == R.id.resultadoTXT){
 
@@ -151,6 +150,7 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
 
             defaultLayoutCardViewImage.height = 300;
             cardViewImage.setLayoutParams(defaultLayoutCardViewImage);
+            cardViewImage.setAnimation(fadeAnimation);
         }
     }
 
@@ -251,8 +251,8 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
                 for (int i = 0; i < items.size(); i++) {
 
                     TextBlock item3 = (TextBlock) items.valueAt(i);
-                    strBuilder.append(item3.getValue());
-                    strBuilder.append("/");
+                    //strBuilder.append(item3.getValue());
+                    //strBuilder.append("/");
 
                     for (Text line : item.getComponents()) {
                         //extract scanned text lines here
@@ -264,6 +264,8 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
                     }
                 }
             }
+
+
 
             String retorno = strBuilder.toString();
 

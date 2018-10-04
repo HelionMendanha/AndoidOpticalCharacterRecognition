@@ -1,1 +1,1 @@
-# AndoidOpticalCharacterRecognition
+# Reconhecimento ótico de caracteres ( OCR )
